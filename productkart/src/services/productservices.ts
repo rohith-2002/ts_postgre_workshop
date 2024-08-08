@@ -1,10 +1,13 @@
 import { Product } from "../model/product";
+import logger from "../logger/logger";
 
 export default class productservices{
    public products:Product[]=[];
+   
 
    public addProduct(product:Product){
     this.products.push(product);
+    logger.info("Product added");
    }
 
    public getProducts():Product[]{
@@ -17,6 +20,7 @@ export default class productservices{
                 return this.products[i];
             }
         }
+        logger.error("Product not found");
         console.log("Product not found");
     }
     catch(e){
@@ -31,23 +35,13 @@ export default class productservices{
                  this.products.splice(i,1);
                 }
           }
+            logger.info("Product deleted");
      }
      catch(e){
           console.log(e);
      }
     }
-    public updateProduct(id:number,product:Product){
-        try{
-            for(let i=0;i<this.products.length;i++){
-                if(this.products[i].getid()==id){
-                    this.products[i]=product;
-                }
-            }
-        }
-        catch(e){
-            console.log(e);
-        }
-    }
+ 
 
     public getproductbyName(name:string):Product|undefined{
         for(let i=0;i<this.products.length;i++){
@@ -56,5 +50,6 @@ export default class productservices{
             } 
         }
         console.log("Product not found");
+        logger.error("Product not found");
     }
 }

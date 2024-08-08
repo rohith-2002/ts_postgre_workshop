@@ -1,0 +1,34 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "samsung",
+            "price": 10000,
+            "rating": 4.5
+        },
+        {
+            "id": 2,
+            "name": "nokia",
+            "price": 8000,
+            "rating": 4.0
+        },
+        {
+            "id": 3,
+            "name": "apple",
+            "price": 50000,
+            "rating": 5.0
+        },
+        {
+            "id": 4,
+            "name": "oneplus",
+            "price": 30000,
+            "rating": 4.5
+        },
+        {
+            "id": 5,
+            "name": "mi",
+            "price": 15000,
+            "rating": 4.0
+        }
+    ]
+}

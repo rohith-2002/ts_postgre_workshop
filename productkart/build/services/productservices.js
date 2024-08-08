@@ -35,18 +35,6 @@ class productservices {
             console.log(e);
         }
     }
-    updateProduct(id, product) {
-        try {
-            for (let i = 0; i < this.products.length; i++) {
-                if (this.products[i].getid() == id) {
-                    this.products[i] = product;
-                }
-            }
-        }
-        catch (e) {
-            console.log(e);
-        }
-    }
     getproductbyName(name) {
         for (let i = 0; i < this.products.length; i++) {
             if (this.products[i].getname() == name) {

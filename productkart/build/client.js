@@ -5,6 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const product_1 = require("./model/product");
 const productservices_1 = __importDefault(require("./services/productservices"));
+// json
+// remove the duplicate code
+// add comments
 const product1 = new product_1.Product(1, "pixel", 40000, 4.5);
 const product2 = new product_1.Product(2, "iphone", 80000, 4.8);
 const product3 = new product_1.Product(3, "samsung", 30000, 4.0);
@@ -22,13 +25,7 @@ console.log("All products");
 console.log(productservice.getProducts());
 console.log("Product by id");
 console.log(productservice.getProductbyID(3));
-function updateProduct() {
-    const product = new product_1.Product(3, "samsung", 35000, 4.0);
-    productservice.updateProduct(3, product);
-    console.log("Product updated");
-    console.log(productservice.getProducts());
-}
-updateProduct();
+// write comments
 function displayProduct(name) {
     console.log("Product by name");
     const prod = productservice.getproductbyName(name);
@@ -46,3 +43,4 @@ function displayProduct(name) {
     console.log(productservice.getProducts());
 }
 displayProduct("realme");
+console.log(productservice.getProducts());

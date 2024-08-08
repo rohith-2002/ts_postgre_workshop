@@ -1,6 +1,6 @@
 import { Product } from "../model/product";
 
-class productservices{
+export default class productservices{
    public products:Product[]=[];
 
    public addProduct(product:Product){
